@@ -1,0 +1,51 @@
+$parent-node: '.card-image'
+:host
+  cursor: pointer
+  text-align: center
+
+  &:hover
+    #{$parent-node}__menu
+      bottom: 1em
+
+#{$parent-node}
+  &__wrapper
+    display: block
+    position: relative
+    overflow: hidden
+
+  &__menu
+    background-color: var(--op-white)
+    border-radius: var(--border-radius)
+
+    position: absolute
+    bottom: -3em
+    left: 1em
+
+    display: flex
+    justify-content: center
+
+    padding: 0.5em 1em
+    width: calc(100% - 2em)
+
+    transition: bottom 0.2s linear
+
+  &__menu-item
+    font-size: 0.75em
+
+    margin: 0
+    padding: 0 .25em
+
+    &:not(&--disabled):hover
+      font-weight: 600
+
+    &--disabled
+      text-decoration-line: line-through
+      color: var(--disabled-color)
+
+
+  &__title
+    font-size: 0.85em
+    font-weight: 400
+    color: var(--descrp-color)
+
+    margin: 1em 0 0

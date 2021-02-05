@@ -1,1 +1,12 @@
-<h1>is working!</h1>
+<app-header></app-header>
+<section>
+    <article>
+        <h2 class="accessible-hide">Con pyjama</h2>
+
+        <div class="container">
+            <div *ngFor="let item of newData">
+                <app-card-image alt="`Imagen {{item.name}}`" [image]="item.img" [title]="item.name" [sizes]="item.sizes.reverse()"></app-card-image>
+            </div>
+        </div>
+    </article>
+</section>

@@ -1,0 +1,7 @@
+<div class="card-image__wrapper">
+  <img class="card-image__img" [src]="image" [alt]="alt">
+  <div class="card-image__menu">
+    <p class="card-image__menu-item" [ngClass]="{'card-image__menu-item--disabled' : !size.inStock}" *ngFor="let size of sizes">{{ size.name }}</p>
+  </div>
+</div>
+<h3 class="card-image__title">{{ title }}</h3>
